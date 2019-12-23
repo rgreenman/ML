@@ -1,5 +1,5 @@
 import repository
-import TrainingDto
+from TrainingDto import TrainingDto
 from datetime import datetime
 
 
