@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  > h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  > button {
+    position: absolute;
+    left: 0;
+  }
+}

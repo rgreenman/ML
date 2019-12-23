@@ -1,0 +1,21 @@
+<table class="dashboard-table">
+  <th class="header-row">
+    <h4>Project Name</h4>
+    <h4>Trained</h4>
+    <h4>Date Created</h4>
+    <h4>Train Project</h4>
+    <h4>Delete Project</h4>
+  </th>
+  <li *ngFor="let project of projects">
+    <tr>{{project.name}}</tr>
+    <tr>{{project.trained === 0 ? 'False': 'True'}}</tr>
+    <tr>{{project.created_date | date :'short'}}</tr>
+    <a routerLink="/training/{{project.id}}">Training</a>
+    <i class="fa fa-trash" (click)="deleteProject(project)"></i>
+  </li>
+</table>
+
+<button class="btn-outline-light create-button" (click)="createProject()">
+  <i class="fa fa-plus-square"></i>
+  Create Project
+</button>

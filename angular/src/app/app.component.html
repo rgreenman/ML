@@ -1,0 +1,9 @@
+<header class="header">
+  <button class="btn-outline-light return-to-dashboard" *ngIf="this.router.url !== '/dashboard'"
+          routerLink="/dashboard">
+    <i class="fa fa-share-square"></i>
+    Dashboard
+  </button>
+  <h1>{{title}}</h1>
+</header>
+<router-outlet></router-outlet>

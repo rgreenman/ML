@@ -1,0 +1,12 @@
+<header class="modal-header">
+  <h4 class="modal-title">Create Project</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </button>
+</header>
+<body class="modal-body">
+  {{"Delete Project: " + project.name + "?"}}
+</body>
+<footer class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="submit(project.id)">Submit</button>
+</footer>

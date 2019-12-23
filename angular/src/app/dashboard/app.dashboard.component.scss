@@ -1,0 +1,43 @@
+.create-button {
+  margin-top: 10px;
+}
+
+.dashboard-table {
+
+  .header-row {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 20em 20em 20em 20em 20em;
+
+    > h4 {
+      margin: 0;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+
+  li {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 20em 20em 20em 20em 20em;
+
+    > tr {
+      text-align: center;
+      border: 1px solid lightgrey;
+    }
+
+    > a {
+      text-align: center;
+      border: 1px solid lightgrey;
+      color: #9ac7f5;
+    }
+
+    > i {
+      text-align: center;
+      border: 1px solid lightgrey;
+      color: #9ac7f5;
+      padding-top: 3px;
+      cursor: pointer;
+    }
+  }
+}

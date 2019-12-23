@@ -1,0 +1,29 @@
+.modal-header {
+  align-items: unset;
+  .modal-title {
+  }
+
+  > button {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+.modal-body {
+  > form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.modal-footer {
+
+  > button {
+    background-color: gray;
+    color: white;
+  }
+
+  .btn-outline-dark:hover {
+    border-color: white;
+  }
+}
