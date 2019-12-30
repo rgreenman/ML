@@ -23,13 +23,21 @@ The goal was to get familiar with both, and then to implement some sort of Machi
   - password = "devdb"
   - db = "ml"
   
+  After installing MySql and creating the database,  I decided to use flyway for SQL version control
+  https://flywaydb.org
+  Follow the instructions for the command line set up and when asked to modify the config file use the following:
+  url=jdbc:mysql://localhost:3306/ml - Note your port might be different if you picked something else
+  user=root
+  password=devdb
+  
+  Then to run the existing scripts to set up your table go into the SQL folder in this project and move it's contents to youe local flyway folder ( Wherever you downloaded it to). From there a simple `flyway migration` from the flyway folder should run the SQL scripts locally and set up your db!
+  
   For the frontend you will need to install angular 8 and the cli
   https://www.javatpoint.com/angular-8-installation
   
   And let's say that all worked out for you below are the following steps.
-  1) Run the MySql db script (Yet to be written)
-  2) In a terminal `ng build --watch` the --watch is only needed if you wanna have hot loading on the frontend 
-  3) In the Python folder `python main.py`
+  1) In the angular folder run `ng build --watch` the --watch is only needed if you wanna have hot loading on the frontend 
+  2) In the Python folder `python main.py`
   
   Did it work? If it did you should see a running app on port 5000. You can currently make and delete projects that don't do anything! But it's a good way to test the db connection!
   
