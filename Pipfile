@@ -9,6 +9,8 @@ verify_ssl = true
 flask
 pymysql
 datetime
+requests
+schedule
 
 [requires]
 python_version = "3.8"

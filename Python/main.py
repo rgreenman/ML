@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 import service
 import logging
+import threading
+import scheduler
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -34,4 +36,7 @@ def delete_project(project_id):
 
 
 if __name__ == "__main__":
+    x = threading.Thread(target=scheduler.initialize_thread, args=(1,), daemon=True)
+    x.start()
+    logger.info("Main    : starting app")
     app.run()
