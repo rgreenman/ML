@@ -58,6 +58,7 @@ class Database:
         self.connection.close()
 
 
+# Project database calls
 def get_all_projects():
     db = Database()
     projects = db.fetch_all("SELECT * FROM project LIMIT 10", {})
@@ -75,3 +76,10 @@ def delete_project(id_):
     db = Database()
     db.delete("DELETE from project WHERE id = %s", id_)
 
+
+# Coin database calls
+def save_coin_price(coins):
+    db = Database()
+    for coin in coins:
+        db.create("INSERT INTO coin_value (coin_type, price, date)""VALUES (%s, %s, %s)",
+                  (coin.coin_type, coin.price, coin.date))
