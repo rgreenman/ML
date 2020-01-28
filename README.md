@@ -30,7 +30,7 @@ The goal was to get familiar with both, and then to implement some sort of Machi
   - user=root
   - password=devdb
   
-  Then to run the existing scripts to set up your table go into the SQL folder in this project and move it's contents to youe local flyway folder ( Wherever you downloaded it to). From there a simple `flyway migration` from the flyway folder should run the SQL scripts locally and set up your db!
+  Then to run the existing scripts to set up your table go into the SQL folder in this project and move it's contents to youe local flyway folder ( Wherever you downloaded it to). From there a simple `flyway migrate` from the flyway folder should run the SQL scripts locally and set up your db!
   
   For the frontend you will need to install angular 8 and the cli
   https://www.javatpoint.com/angular-8-installation
