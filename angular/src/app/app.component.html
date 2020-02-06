@@ -4,6 +4,11 @@
     <i class="fa fa-share-square"></i>
     Dashboard
   </button>
+  <button class="btn-outline-light" *ngIf="this.router.url === '/dashboard'"
+          routerLink="/coinValueChart">
+    <i class="fa fa-chart-line"></i>
+    Coin Value Chart
+  </button>
   <h1>{{title}}</h1>
 </header>
 <router-outlet></router-outlet>

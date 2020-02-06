@@ -1,0 +1,26 @@
+<header>
+  <h6>{{"Showing the last"}}
+    <form>
+      <label for="limitSelect"></label>
+      <select name="limit" id="limitSelect" [(ngModel)]="selectedLimit" (ngModelChange)="changeGraphLimit()">
+        <option *ngFor="let limit of limits" [value]="limit.value">
+          {{limit.name}}
+        </option>
+      </select>
+    </form>
+    {{"most recent data points"}}</h6>
+</header>
+<body>
+<section class="graph-section">
+  <canvas #bitcoinLineChart>{{bitcoinLineChart}}</canvas>
+</section>
+<section class="table-section">
+  <canvas #bitcoinCashLineChart>{{bitcoinCashLineChart}}</canvas>
+</section>
+<section>
+  <canvas #ethereumLineChart>{{ethereumLineChart}}</canvas>
+</section>
+<section>
+  <canvas #binanceLineChart>{{binanceLineChart}}</canvas>
+</section>
+</body>

@@ -77,6 +77,12 @@ def delete_project(id_):
     db.delete("DELETE from project WHERE id = %s", id_)
 
 
+def coin_value_chart(coin_type, limit):
+    db = Database()
+    # Fetch the 10 most recent points for every coin
+    return db.fetch_all("SELECT * FROM coin_value WHERE coin_type = %s ORDER BY date DESC LIMIT %s", (str(coin_type), int(limit)))
+
+
 # Coin database calls
 def save_coin_price(coins):
     db = Database()

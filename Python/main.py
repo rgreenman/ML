@@ -1,13 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, json
 import service
 import logging
 import threading
 import scheduler
+import utils
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_url_path="")
+app.url_map.converters['int_list'] = utils.IntListConverter
 
 
 @app.route('/')
@@ -33,6 +35,12 @@ def create_project():
 def delete_project(project_id):
     logger.info("[DELETE][project][" + str(project_id) + "]")
     return jsonify(service.delete_project(project_id))
+
+
+@app.route('/coinValueChart/<int_list:coins>/<int:limit>', methods=['GET'])
+def coin_value_chart(coins, limit):
+    logger.info("[GET][coinValueChart][" + str(len(coins)) + "][" + str(limit) + "]")
+    return json.dumps(service.coin_value_chart(coins, limit), default=utils.object_dict)
 
 
 if __name__ == "__main__":

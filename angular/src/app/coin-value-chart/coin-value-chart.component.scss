@@ -1,0 +1,39 @@
+:host {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    align-items: baseline;
+    h6 {
+      display: flex;
+
+      > form {
+        padding: 0 3px 0 3px;
+        select {
+          background-color: #37434e;
+          color: #C5EFF7;
+        }
+      }
+    }
+  }
+
+  body {
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+
+    > section {
+      height: 100%;
+      overflow: hidden;
+
+      > canvas {
+        max-height: 410px;
+      }
+    }
+  }
+}

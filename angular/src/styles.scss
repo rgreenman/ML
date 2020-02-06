@@ -1,6 +1,6 @@
 /* Application-wide Styles */
-$fa-font-path: "../node_modules/font-awesome/fonts";
-@import '~font-awesome/scss/font-awesome.scss';
+//$fa-font-path: "../node_modules/@fortawesome/web";
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 h1 {
   color: #C5EFF7;
   font-family: Arial, Helvetica, sans-serif;
@@ -17,15 +17,22 @@ html {
   background-color: #37434e;
 }
 body {
-  margin: 2em;
+  height: 100%;
+  overflow: hidden;
   background-color: #37434e;
+}
+app-root {
+  height: 100%;
+  overflow: hidden;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 body, button {
   color: #C5EFF7;
   font-family: Cambria, Georgia, sans-serif;
 }
 input[type="text"] {
-  //background-color: #485F6E;
   color: #37434e;
   font-family: Cambria, Georgia, sans-serif;
 }

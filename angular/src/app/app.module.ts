@@ -9,6 +9,7 @@ import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {CoinValueChartComponent} from "./coin-value-chart/coin-value-chart.component";
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     AppTrainingComponent,
     AppDashboardComponent,
     AppCreateProjectComponent,
-    AppDeleteProjectComponent
+    AppDeleteProjectComponent,
+    CoinValueChartComponent
   ],
   entryComponents: [
     AppCreateProjectComponent,
