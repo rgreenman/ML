@@ -39,7 +39,7 @@ The goal was to get familiar with both, and then to implement some sort of Machi
   1) In the angular folder run `ng build --watch` the --watch is only needed if you wanna have hot loading on the frontend 
   2) In the Python folder `python main.py`
   
-  Did it work? If it did you should see a running app on port 5000. You can currently make and delete projects that don't do anything! But it's a good way to test the db connection!
+  Did it work? If it did you should see a running app on port 5000. You can currently make and delete projects that don't do anything! But it's a good way to test the db connection! I added on a new page which can be navigated to by clicking the button up in the top left hand corner. This page displays 4 graphs created with Chart.js. You can change how many points are displayed using the dropdown, and automatically every 5 minutes it will add the next data point to the graphs.
   
 ## Future
 
